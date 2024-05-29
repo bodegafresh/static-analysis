@@ -16,6 +16,17 @@ Al final de esta presentación, espero que tengan una comprensión clara de cóm
 
 == Historia del Análisis Estático
 
+El análisis estático de software se refiere al examen del código fuente sin ejecutarlo. Sus orígenes se remontan a los años 70, cuando se comenzaron a desarrollar los primeros compiladores y herramientas de análisis de código. Inicialmente, estas herramientas se centraban en verificar la sintaxis y la semántica básica del código.
+
+A lo largo de los años, el análisis estático ha evolucionado para incluir una amplia variedad de verificaciones, como la detección de errores de lógica, problemas de seguridad, adherencia a estándares de codificación y la optimización del rendimiento. Con la creciente complejidad del software y la necesidad de entregar código de alta calidad, el análisis estático se ha convertido en una parte esencial del ciclo de desarrollo de software.
+
+Las primeras herramientas de análisis estático fueron bastante básicas y generalmente se integraban directamente en los compiladores. Algunas de las primeras herramientas notables incluyen:
+
+Lint (1978): Una de las primeras herramientas de análisis estático para el lenguaje C. Su propósito principal era detectar posibles errores de programación y problemas de estilo.
+Unix cc Compiler Warnings: Los compiladores de Unix comenzaron a incluir advertencias sobre posibles errores en el código.
+
+Presentacion:
+
 El análisis estático de software tiene sus orígenes en los años 70, cuando se desarrollaron las primeras herramientas como Lint y los compiladores de Unix. Estas herramientas se enfocaban en verificar la sintaxis y la semántica básica del código. Con el tiempo, el análisis estático ha evolucionado para incluir la detección de errores de lógica, problemas de seguridad y adherencia a estándares de codificación.
 
 == ¿Qué es el Análisis Estático?
@@ -25,6 +36,12 @@ El análisis estático de software implica examinar el código fuente sin ejecut
 == Herramientas Modernas
 
 En la actualidad, existen muchas herramientas avanzadas para el análisis estático. Dos de las más populares son SonarQube y PMD. Estas herramientas proporcionan análisis detallados del código y ayudan a los desarrolladores a mantener altos estándares de calidad.
+
+- SonarQube: Una plataforma de código abierto que permite medir y analizar la calidad del código.
+- Checkstyle: Una herramienta de desarrollo que ayuda a los programadores a escribir código Java que sigue las convenciones de codificación.
+- PMD: Una herramienta que analiza el código fuente en busca de posibles errores y patrones subóptimos.
+- FindBugs (ahora SpotBugs): Analiza el bytecode Java en busca de errores potenciales.
+- Coverity: Una herramienta comercial de análisis estático que detecta una amplia gama de defectos de software.
 
 == Características de SonarQube
 
@@ -155,6 +172,81 @@ Ahora, consideremos un caso de estudio. Imaginemos un equipo de 9 desarrolladore
 Esta tabla nos ayuda a entender las diferencias clave entre SonarQube y PMD. Mientras SonarQube ofrece un análisis integral y capacidades avanzadas, PMD es más ligero y fácil de configurar.
 
 == Métricas de Calidad en SonarQube
+
+Métricas de Calidad de Software
+Las métricas de calidad de software son medidas cuantitativas que se utilizan para evaluar diferentes aspectos de la calidad del código y del sistema en su conjunto. Estas métricas ayudan a identificar áreas problemáticas, mejorar la mantenibilidad, aumentar la fiabilidad y garantizar que el software cumpla con los requisitos de los stakeholders. Las métricas de calidad pueden abarcar varios dominios, incluyendo la complejidad del código, la cobertura de pruebas, la duplicación de código, y las vulnerabilidades de seguridad, entre otros.
+
+Métricas de Calidad Contempladas por SonarQube
+SonarQube es una herramienta de análisis de calidad de código que proporciona una amplia gama de métricas para evaluar la calidad del software. Algunas de las métricas clave que SonarQube contempla incluyen:
+
+1. Complejidad
+- Complejidad Ciclomática: Mide la cantidad de rutas independientes a través del código. Un valor alto indica que el código puede ser difícil de entender y mantener.
+- Complejidad Cognitiva: Evalúa cuán difícil es entender el flujo lógico del código. A diferencia de la complejidad ciclomática, se enfoca más en la dificultad percibida por los desarrolladores al leer y entender el código.
+2. Cobertura de Pruebas
+- Cobertura de Código: Proporción del código que está cubierto por pruebas automatizadas (unitarias, de integración, etc.). Un valor bajo puede indicar que el código es susceptible a errores no detectados.
+- Cobertura de Líneas: Porcentaje de líneas de código ejecutadas por las pruebas.
+- Cobertura de Condiciones: Porcentaje de condiciones booleanas que han sido evaluadas por las pruebas.
+3. Duplicación de Código
+- Duplicación de Bloques: Mide el porcentaje de código que está duplicado en diferentes partes del proyecto. La duplicación puede indicar problemas de mantenimiento y un mayor riesgo de inconsistencias.
+4. Issues de Calidad
+- Bugs: Problemas en el código que probablemente causarán fallos en tiempo de ejecución.
+- Vulnerabilidades: Problemas de seguridad que podrían ser explotados por atacantes.
+- Code Smells: Problemas en el código que no son necesariamente bugs pero que pueden indicar posibles mejoras en el diseño y la mantenibilidad.
+5. Mantenibilidad
+- Debt Ratio (Ratio de Deuda Técnica): Proporción entre el esfuerzo necesario para remediar los problemas de calidad y el esfuerzo total de desarrollo. Un alto ratio de deuda técnica indica que hay muchos problemas que deberían ser abordados para mejorar la calidad del código.
+- Time to Fix (Tiempo para Corregir): Tiempo estimado para corregir todos los problemas de calidad identificados.
+6. Seguridad
+- Vulnerabilidades de Seguridad: Identificación y clasificación de vulnerabilidades de seguridad en el código.
+- Hotspots de Seguridad: Partes del código que necesitan revisión adicional para garantizar que no contienen vulnerabilidades de seguridad.
+7. Fiabilidad
+- Reliability Rating (Calificación de Fiabilidad): Medida de la probabilidad de que el software funcione correctamente durante un período específico sin fallos.
+- Reliability Remediation Effort (Esfuerzo de Remediación de Fiabilidad): Tiempo estimado para remediar todos los problemas que afectan la fiabilidad del sistema.
+8. Operaciones
+- Issues Operacionales: Problemas que podrían afectar el rendimiento o la estabilidad del sistema en producción.
+
+
+=== Visualización de Métricas en SonarQube
+
+SonarQube proporciona una interfaz web intuitiva donde los desarrolladores y gestores de proyectos pueden ver y analizar estas métricas. Algunas características destacadas de la interfaz incluyen:
+
+Métricas de Calidad de Software
+Las métricas de calidad de software son medidas cuantitativas que se utilizan para evaluar diferentes aspectos de la calidad del código y del sistema en su conjunto. Estas métricas ayudan a identificar áreas problemáticas, mejorar la mantenibilidad, aumentar la fiabilidad y garantizar que el software cumpla con los requisitos de los stakeholders. Las métricas de calidad pueden abarcar varios dominios, incluyendo la complejidad del código, la cobertura de pruebas, la duplicación de código, y las vulnerabilidades de seguridad, entre otros.
+
+Métricas de Calidad Contempladas por SonarQube
+SonarQube es una herramienta de análisis de calidad de código que proporciona una amplia gama de métricas para evaluar la calidad del software. Algunas de las métricas clave que SonarQube contempla incluyen:
+
+1. Complejidad
+Complejidad Ciclomática: Mide la cantidad de rutas independientes a través del código. Un valor alto indica que el código puede ser difícil de entender y mantener.
+Complejidad Cognitiva: Evalúa cuán difícil es entender el flujo lógico del código. A diferencia de la complejidad ciclomática, se enfoca más en la dificultad percibida por los desarrolladores al leer y entender el código.
+2. Cobertura de Pruebas
+Cobertura de Código: Proporción del código que está cubierto por pruebas automatizadas (unitarias, de integración, etc.). Un valor bajo puede indicar que el código es susceptible a errores no detectados.
+Cobertura de Líneas: Porcentaje de líneas de código ejecutadas por las pruebas.
+Cobertura de Condiciones: Porcentaje de condiciones booleanas que han sido evaluadas por las pruebas.
+3. Duplicación de Código
+Duplicación de Bloques: Mide el porcentaje de código que está duplicado en diferentes partes del proyecto. La duplicación puede indicar problemas de mantenimiento y un mayor riesgo de inconsistencias.
+4. Issues de Calidad
+Bugs: Problemas en el código que probablemente causarán fallos en tiempo de ejecución.
+Vulnerabilidades: Problemas de seguridad que podrían ser explotados por atacantes.
+Code Smells: Problemas en el código que no son necesariamente bugs pero que pueden indicar posibles mejoras en el diseño y la mantenibilidad.
+5. Mantenibilidad
+Debt Ratio (Ratio de Deuda Técnica): Proporción entre el esfuerzo necesario para remediar los problemas de calidad y el esfuerzo total de desarrollo. Un alto ratio de deuda técnica indica que hay muchos problemas que deberían ser abordados para mejorar la calidad del código.
+Time to Fix (Tiempo para Corregir): Tiempo estimado para corregir todos los problemas de calidad identificados.
+6. Seguridad
+Vulnerabilidades de Seguridad: Identificación y clasificación de vulnerabilidades de seguridad en el código.
+Hotspots de Seguridad: Partes del código que necesitan revisión adicional para garantizar que no contienen vulnerabilidades de seguridad.
+7. Fiabilidad
+Reliability Rating (Calificación de Fiabilidad): Medida de la probabilidad de que el software funcione correctamente durante un período específico sin fallos.
+Reliability Remediation Effort (Esfuerzo de Remediación de Fiabilidad): Tiempo estimado para remediar todos los problemas que afectan la fiabilidad del sistema.
+8. Operaciones
+Issues Operacionales: Problemas que podrían afectar el rendimiento o la estabilidad del sistema en producción.
+
+=== Visualización de Métricas en SonarQube
+SonarQube proporciona una interfaz web intuitiva donde los desarrolladores y gestores de proyectos pueden ver y analizar estas métricas. Algunas características destacadas de la interfaz incluyen:
+
+- Dashboards Personalizables: Los usuarios pueden crear dashboards personalizados para seguir las métricas más relevantes para sus proyectos.
+- Historial de Métricas: Permite visualizar cómo las métricas de calidad han cambiado a lo largo del tiempo, lo cual es útil para identificar tendencias y evaluar el impacto de cambios en el código.
+- Alertas y Notificaciones: Los usuarios pueden configurar alertas para recibir notificaciones cuando ciertas métricas superan umbrales predefinidos.
+
 
 [cols="4*", options="header"]
 |===
