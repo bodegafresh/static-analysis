@@ -294,6 +294,33 @@ SonarQube proporciona una interfaz web intuitiva donde los desarrolladores y ges
 
 |===
 
+
+[cols="3*", options="header"]
+|===
+| Valor de Criticidad | Descripción | Impacto
+
+| Bloqueante
+| Problemas críticos que deben resolverse inmediatamente
+| Alto: Impacta directamente la funcionalidad y seguridad del sistema
+
+| Crítica
+| Problemas graves que deben ser abordados lo antes posible
+| Alto: Riesgo significativo de fallos o vulnerabilidades
+
+| Mayor
+| Problemas serios que afectan la calidad del código
+| Medio-Alto: Afecta la mantenibilidad y rendimiento
+
+| Menor
+| Problemas que no tienen un impacto inmediato pero deben ser corregidos
+| Medio-Bajo: Afecta la claridad y estilo del código
+
+| Info
+| Problemas informativos o mejoras recomendadas
+| Bajo: Impacto mínimo, pero mejora la calidad del código
+
+|===
+
 Estas métricas de SonarQube proporcionan una visión integral de la calidad del código, ayudando a identificar áreas que necesitan mejora. Cada métrica tiene una forma específica de medición y un impacto definido en la calidad del software.
 
 == Problemas Detectados por PMD
