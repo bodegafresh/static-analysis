@@ -4,7 +4,15 @@ Marco
 
 == Introducción
 
-Bienvenidos a esta presentación sobre el análisis estático de software. Hoy exploraremos las herramientas PMD y SonarQube, y discutiremos otros tipos de análisis de software. Nuestro objetivo es entender cómo estas herramientas pueden ayudar a mejorar la calidad del código y tomar decisiones informadas sobre su uso en proyectos de desarrollo.
+Bienvenidos a esta presentación sobre el análisis estático de software. 
+
+En el desarrollo de software moderno, la calidad del código es fundamental. Un código de alta calidad no solo facilita el mantenimiento y la escalabilidad del software, sino que también reduce la probabilidad de errores y vulnerabilidades que pueden afectar la funcionalidad y seguridad del sistema. Mantener altos estándares de calidad del software es esencial para asegurar que nuestras aplicaciones sean robustas, seguras y eficientes.
+
+El análisis estático es una de las herramientas más poderosas a nuestra disposición para garantizar la calidad del código. Al permitirnos detectar problemas potenciales en el código sin necesidad de ejecutarlo, el análisis estático nos ayuda a identificar y corregir errores temprano en el ciclo de desarrollo. Esto no solo mejora la calidad del software, sino que también reduce los costos y el tiempo asociados con la corrección de errores en etapas posteriores.
+
+El objetivo de esta charla es comparar dos herramientas populares de análisis estático: PMD y SonarQube. Discutiremos sus características, fortalezas y debilidades, y veremos cómo pueden ser utilizadas para mejorar la calidad del código en nuestros proyectos. Además, exploraremos otros tipos de análisis de software que también juegan un papel crucial en la garantía de la calidad del software. 
+
+Al final de esta presentación, espero que tengan una comprensión clara de cómo estas herramientas pueden integrarse en sus procesos de desarrollo para crear software de alta calidad. Gracias por acompañarnos hoy.
 
 == Historia del Análisis Estático
 
