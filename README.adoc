@@ -298,6 +298,56 @@ Estas métricas de SonarQube proporcionan una visión integral de la calidad del
 
 == Problemas Detectados por PMD
 
+
+1. Errores de Programación Comunes
+NullPointerException: Identifica posibles usos de objetos null que podrían causar excepciones en tiempo de ejecución.
+Array Index Out Of Bounds: Detecta accesos a índices de arrays que podrían estar fuera de sus límites.
+Division by Zero: Encuentra operaciones aritméticas que podrían resultar en una división por cero.
+
+2. Código Ineficiente
+Inefficient String Concatenation: Detecta concatenaciones de strings en bucles que deberían usar StringBuilder o StringBuffer.
+Unused Local Variables: Identifica variables locales que son declaradas pero nunca utilizadas.
+Unused Private Fields: Encuentra campos privados que nunca son referenciados.
+
+3. Malos Hábitos de Codificación
+Empty Catch Block: Bloques catch vacíos que silencian excepciones sin manejarlas adecuadamente.
+Empty If Statement: Condicionales if que no contienen ningún código en su bloque.
+Empty Statement: Bloques de código vacíos que no tienen efecto.
+Unnecessary Constructors: Constructores que no hacen nada o sólo llaman al constructor de la superclase sin realizar ninguna acción adicional.
+
+4. Problemas de Estilo y Convenciones de Codificación
+Long Variable Names: Nombres de variables excesivamente largos que afectan la legibilidad del código.
+Short Variable Names: Nombres de variables demasiado cortos que no describen adecuadamente su propósito.
+Magic Numbers: Uso de números literales en el código en lugar de constantes descriptivas.
+Misleading Variable Names: Variables con nombres que no reflejan su propósito o contenido.
+
+5. Problemas de Diseño
+Excessive Class Length: Clases que son demasiado largas y complejas.
+Excessive Method Length: Métodos que contienen demasiadas líneas de código, indicando que deberían ser refactorizados.
+Coupling Between Objects: Demasiadas dependencias entre clases, lo cual puede indicar problemas de diseño y mantenimiento.
+High Cyclomatic Complexity: Métodos o clases con una complejidad ciclomática alta, lo que sugiere que son difíciles de entender y mantener.
+
+6. Errores de Seguridad
+Hardcoded Credentials: Detecta credenciales como nombres de usuario y contraseñas que están hardcoded en el código fuente.
+Insecure HTTP: Uso de HTTP en lugar de HTTPS para la comunicación, lo cual puede ser un riesgo de seguridad.
+Deserialization Issues: Problemas relacionados con la deserialización de datos que podrían ser explotados para ataques de seguridad.
+
+7. Problemas de Mantenimiento
+Duplicate Code: Código duplicado que debería ser refactorizado para mejorar la mantenibilidad.
+Dead Code: Código que nunca se ejecuta y puede ser eliminado.
+God Class: Clases que tienen demasiadas responsabilidades y deberían ser refactorizadas en clases más pequeñas y cohesivas.
+
+8. Potenciales Bugs y Problemas de Lógica
+Suspicious Equals Method: Implementaciones de métodos equals que podrían ser incorrectas o incompletas.
+Overridden Methods: Problemas con métodos que sobrecargan o sobrescriben métodos en maneras que pueden ser problemáticas.
+Missing Break in Switch: Switch statements que podrían faltar break statements, causando comportamiento no intencional.
+
+9. Mejores Prácticas de Codificación
+Proper Use of Access Modifiers: Asegurar que los campos y métodos tengan el nivel de acceso adecuado (public, private, protected).
+Final Modifier for Static Fields: Recomendaciones sobre el uso de final para constantes y campos estáticos.
+
+
+
 [cols="4*", options="header"]
 |===
 | Problema | Descripción | Categoría | Severidad
