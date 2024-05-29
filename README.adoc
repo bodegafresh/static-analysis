@@ -43,15 +43,7 @@ En la actualidad, existen muchas herramientas avanzadas para el análisis estát
 - FindBugs (ahora SpotBugs): Analiza el bytecode Java en busca de errores potenciales.
 - Coverity: Una herramienta comercial de análisis estático que detecta una amplia gama de defectos de software.
 
-== Características de SonarQube
-
-SonarQube es una plataforma integral para la gestión de la calidad del código. Ofrece análisis de código, métricas de calidad y capacidades de integración continua. Soporta una amplia gama de lenguajes de programación, incluyendo Java, JavaScript, C#, C++, Python, PHP, y más.
-
-== Características de PMD
-
-PMD se centra en la detección de errores de programación y problemas de estilo. Es ligero y fácil de integrar con herramientas de build como Gradle. Aunque soporta varios lenguajes, PMD es más conocido por su análisis en Java.
-
-== Tabla Comparativa de Herramientas
+=== Tabla Comparativa de Herramientas
 
 [cols="3*", options="header"]
 |===
@@ -80,6 +72,15 @@ PMD se centra en la detección de errores de programación y problemas de estilo
 |===
 
 Esta tabla muestra una comparación de algunas de las herramientas más utilizadas para el análisis estático de código. Como podemos ver, SonarQube y PMD tienen enfoques y capacidades diferentes, pero ambos son extremadamente útiles para mejorar la calidad del software.
+
+
+== Características de SonarQube
+
+SonarQube es una plataforma integral para la gestión de la calidad del código. Ofrece análisis de código, métricas de calidad y capacidades de integración continua. Soporta una amplia gama de lenguajes de programación, incluyendo Java, JavaScript, C#, C++, Python, PHP, y más.
+
+== Características de PMD
+
+PMD se centra en la detección de errores de programación y problemas de estilo. Es ligero y fácil de integrar con herramientas de build como Gradle. Aunque soporta varios lenguajes, PMD es más conocido por su análisis en Java.
 
 == Otros Tipos de Análisis de Software
 
@@ -291,6 +292,33 @@ SonarQube proporciona una interfaz web intuitiva donde los desarrolladores y ges
 | Proporción del esfuerzo necesario para remediar problemas de calidad
 | Alta: Indicador de acumulación de problemas técnicos
 | Porcentaje de deuda técnica: Bajo (<5%), Medio (5%-10%), Alto (>10%)
+
+|===
+
+
+[cols="3*", options="header"]
+|===
+| Valor de Criticidad | Descripción | Impacto
+
+| Bloqueante
+| Problemas críticos que deben resolverse inmediatamente
+| Alto: Impacta directamente la funcionalidad y seguridad del sistema
+
+| Crítica
+| Problemas graves que deben ser abordados lo antes posible
+| Alto: Riesgo significativo de fallos o vulnerabilidades
+
+| Mayor
+| Problemas serios que afectan la calidad del código
+| Medio-Alto: Afecta la mantenibilidad y rendimiento
+
+| Menor
+| Problemas que no tienen un impacto inmediato pero deben ser corregidos
+| Medio-Bajo: Afecta la claridad y estilo del código
+
+| Info
+| Problemas informativos o mejoras recomendadas
+| Bajo: Impacto mínimo, pero mejora la calidad del código
 
 |===
 
