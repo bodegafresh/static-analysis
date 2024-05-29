@@ -1,0 +1,364 @@
+= Análisis Estático de Software: PMD vs. SonarQube y Otros Tipos de Análisis
+Marco
+2024-05-28
+
+== Introducción
+
+Bienvenidos a esta presentación sobre el análisis estático de software. Hoy exploraremos las herramientas PMD y SonarQube, y discutiremos otros tipos de análisis de software. Nuestro objetivo es entender cómo estas herramientas pueden ayudar a mejorar la calidad del código y tomar decisiones informadas sobre su uso en proyectos de desarrollo.
+
+== Historia del Análisis Estático
+
+El análisis estático de software tiene sus orígenes en los años 70, cuando se desarrollaron las primeras herramientas como Lint y los compiladores de Unix. Estas herramientas se enfocaban en verificar la sintaxis y la semántica básica del código. Con el tiempo, el análisis estático ha evolucionado para incluir la detección de errores de lógica, problemas de seguridad y adherencia a estándares de codificación.
+
+== ¿Qué es el Análisis Estático?
+
+El análisis estático de software implica examinar el código fuente sin ejecutarlo. Esta técnica ayuda a identificar errores potenciales y problemas de calidad antes de que el código se ejecute. Es una práctica esencial para mantener la calidad del software a lo largo del ciclo de desarrollo.
+
+== Herramientas Modernas
+
+En la actualidad, existen muchas herramientas avanzadas para el análisis estático. Dos de las más populares son SonarQube y PMD. Estas herramientas proporcionan análisis detallados del código y ayudan a los desarrolladores a mantener altos estándares de calidad.
+
+== Características de SonarQube
+
+SonarQube es una plataforma integral para la gestión de la calidad del código. Ofrece análisis de código, métricas de calidad y capacidades de integración continua. Soporta una amplia gama de lenguajes de programación, incluyendo Java, JavaScript, C#, C++, Python, PHP, y más.
+
+== Características de PMD
+
+PMD se centra en la detección de errores de programación y problemas de estilo. Es ligero y fácil de integrar con herramientas de build como Gradle. Aunque soporta varios lenguajes, PMD es más conocido por su análisis en Java.
+
+== Tabla Comparativa de Herramientas
+
+[cols="3*", options="header"]
+|===
+| Herramienta | Características Principales | Lenguajes Soportados
+
+| SonarQube
+| Análisis integral de calidad de código, métricas avanzadas, integración con CI/CD
+| Java, JavaScript, C#, C++, Python, PHP, y más
+
+| PMD
+| Detección de errores de codificación, problemas de estilo, integración con herramientas de build
+| Java, JavaScript, Apex, PLSQL, XML, XSL
+
+| Checkstyle
+| Enfoque en convenciones de codificación y estilo, fácil integración con herramientas de build
+| Java
+
+| FindBugs (ahora SpotBugs)
+| Detección de errores de código en el bytecode Java, integración con herramientas de build
+| Java
+
+| Coverity
+| Detección de una amplia gama de defectos de software, enfoque en seguridad y fiabilidad
+| C, C++, C#, Java, JavaScript, Python, Ruby, y más
+
+|===
+
+Esta tabla muestra una comparación de algunas de las herramientas más utilizadas para el análisis estático de código. Como podemos ver, SonarQube y PMD tienen enfoques y capacidades diferentes, pero ambos son extremadamente útiles para mejorar la calidad del software.
+
+== Otros Tipos de Análisis de Software
+
+[cols="3*", options="header"]
+|===
+| Tipo de Análisis | Descripción | Ejemplos
+
+| Análisis Dinámico
+| Se realiza ejecutando el software y observando su comportamiento en tiempo de ejecución
+| Pruebas de unidad, pruebas de integración, pruebas de sistema, pruebas de rendimiento, pruebas de seguridad
+
+| Análisis de Código Fuente
+| Incluye técnicas especializadas para analizar el código fuente
+| Revisión de código, análisis de complejidad, análisis de dependencias
+
+| Análisis de Modelos
+| Verifica la corrección y consistencia del diseño antes de la implementación
+| Verificación de modelos, simulación de modelos
+
+| Análisis de Datos
+| Evalúa el manejo y flujo de datos dentro del sistema
+| Análisis de flujos de datos, análisis de propagación de datos
+
+| Análisis de Configuración
+| Se enfoca en la configuración del software y su entorno de ejecución
+| Gestión de configuración, validación de configuración
+
+| Análisis de Seguridad
+| Identifica y mitiga vulnerabilidades de seguridad en el software
+| Análisis de vulnerabilidades, pruebas de penetración
+
+| Análisis de Usabilidad
+| Evalúa la facilidad de uso del software desde la perspectiva del usuario final
+| Pruebas de usabilidad, análisis heurístico
+
+| Análisis de Mantenibilidad
+| Evalúa la capacidad del software para ser modificado
+| Análisis de métricas de mantenibilidad, evaluación de la documentación
+
+| Análisis de Fiabilidad
+| Evalúa la capacidad del software para funcionar correctamente durante un período de tiempo
+| Pruebas de estrés, pruebas de robustez
+
+|===
+
+Esta tabla resume los diferentes tipos de análisis de software, proporcionando una visión general de sus propósitos y ejemplos comunes.
+
+== Caso de Estudio: Proyecto Spring Boot con Gradle
+
+Ahora, consideremos un caso de estudio. Imaginemos un equipo de 9 desarrolladores trabajando en un proyecto de Spring Boot con Gradle. Este proyecto maneja un gran volumen de datos de distintos proveedores y está embebido en una aplicación de ecommerce usada en varios países de Latinoamérica. Dado que la integración con el CI/CD actual es complicada, el equipo está considerando el uso de PMD y SonarQube para mejorar la calidad del código.
+
+== Tabla Comparativa de SonarQube vs. PMD
+
+[cols="4*", options="header"]
+|===
+| Aspecto | SonarQube | PMD | Comentario
+
+| Enfoque
+| Análisis integral de calidad
+| Detección de errores de codificación
+| SonarQube ofrece un análisis más amplio y detallado
+
+| Integración con CI/CD
+| Sí, amplia integración
+| Limitada, más ligera
+| SonarQube tiene mejores capacidades de integración continua
+
+| Métricas de Calidad
+| Cobertura de pruebas, deuda técnica, complejidad, duplicación, y más
+| Problemas de codificación, estilo y diseño
+| SonarQube proporciona métricas más diversas y detalladas
+
+| Facilidad de Configuración
+| Requiere más configuración
+| Más fácil de configurar
+| PMD es más ligero y sencillo de integrar
+
+| Reportes y Dashboards
+| Dashboard centralizado con informes detallados
+| Informes simples
+| SonarQube ofrece mejores capacidades de reporte y visualización
+
+| Soporte Multilenguaje
+| Soporte para muchos lenguajes
+| Menos lenguajes soportados
+| SonarQube tiene un soporte más amplio de lenguajes
+
+|===
+
+Esta tabla nos ayuda a entender las diferencias clave entre SonarQube y PMD. Mientras SonarQube ofrece un análisis integral y capacidades avanzadas, PMD es más ligero y fácil de configurar.
+
+== Métricas de Calidad en SonarQube
+
+[cols="4*", options="header"]
+|===
+| Métrica | Descripción | Criticidad | Forma de Medir/Valores
+
+| Complejidad Ciclomática
+| Mide la cantidad de rutas independientes a través del código
+| Alta: Afecta la mantenibilidad y comprensión del código
+| Número de caminos de ejecución: Bajo (1-10), Medio (11-20), Alto (>20)
+
+| Complejidad Cognitiva
+| Evalúa la dificultad para entender el flujo lógico del código
+| Alta: Impacta la facilidad de mantenimiento
+| Dificultad percibida: Bajo (1-10), Medio (11-20), Alto (>20)
+
+| Cobertura de Código
+| Proporción del código cubierto por pruebas automatizadas
+| Crítica: Baja cobertura puede indicar áreas propensas a errores
+| Porcentaje de líneas cubiertas: Bajo (<50%), Medio (50%-80%), Alto (>80%)
+
+| Duplicación de Código
+| Porcentaje de código duplicado en el proyecto
+| Media: Afecta la mantenibilidad y consistencia
+| Porcentaje de duplicación: Bajo (<5%), Medio (5%-10%), Alto (>10%)
+
+| Bugs
+| Problemas en el código que pueden causar fallos en tiempo de ejecución
+| Crítica: Directamente impacta la fiabilidad del software
+| Número de bugs: Crítico, Alto, Medio, Bajo (según impacto)
+
+| Vulnerabilidades
+| Problemas de seguridad que podrían ser explotados
+| Crítica: Afecta la seguridad del sistema
+| Número de vulnerabilidades: Crítico, Alto, Medio, Bajo (según severidad)
+
+| Code Smells
+| Problemas de diseño y mantenibilidad en el código
+| Media: Afecta la calidad y facilidad de mantenimiento a largo plazo
+| Número de code smells: Bajo, Medio, Alto (según impacto en la mantenibilidad)
+
+| Debt Ratio (Ratio de Deuda Técnica)
+| Proporción del esfuerzo necesario para remediar problemas de calidad
+| Alta: Indicador de acumulación de problemas técnicos
+| Porcentaje de deuda técnica: Bajo (<5%), Medio (5%-10%), Alto (>10%)
+
+|===
+
+Estas métricas de SonarQube proporcionan una visión integral de la calidad del código, ayudando a identificar áreas que necesitan mejora. Cada métrica tiene una forma específica de medición y un impacto definido en la calidad del software.
+
+== Problemas Detectados por PMD
+
+[cols="4*", options="header"]
+|===
+| Problema | Descripción | Categoría | Severidad
+
+| NullPointerException
+| Posibles usos de objetos null que pueden causar excepciones en tiempo de ejecución
+| Errores de Programación
+| Alta
+
+| Array Index Out Of Bounds
+| Accesos a índices de arrays que podrían estar fuera de sus límites
+| Errores de Programación
+| Alta
+
+| Division by Zero
+| Operaciones aritméticas que podrían resultar en una división por cero
+| Errores de Programación
+| Alta
+
+| Inefficient String Concatenation
+| Concatenaciones de strings en bucles que deberían usar `StringBuilder` o `StringBuffer`
+| Código Ineficiente
+| Media
+
+| Unused Local Variables
+| Variables locales que son declaradas pero nunca utilizadas
+| Código Ineficiente
+| Baja
+
+| Unused Private Fields
+| Campos privados que nunca son referenciados
+| Código Ineficiente
+| Baja
+
+| Empty Catch Block
+| Bloques catch vacíos que silencian excepciones sin manejarlas adecuadamente
+| Malos Hábitos de Codificación
+| Alta
+
+| Empty If Statement
+| Condicionales if que no contienen ningún código en su bloque
+| Malos Hábitos de Codificación
+| Baja
+
+| Empty Statement
+| Bloques de código vacíos que no tienen efecto
+| Malos Hábitos de Codificación
+| Baja
+
+| Unnecessary Constructors
+| Constructores que no hacen nada o sólo llaman al constructor de la superclase sin realizar ninguna acción adicional
+| Malos Hábitos de Codificación
+| Media
+
+| Long Variable Names
+| Nombres de variables excesivamente largos que afectan la legibilidad del código
+| Problemas de Estilo y Convenciones de Codificación
+| Baja
+
+| Short Variable Names
+| Nombres de variables demasiado cortos que no describen adecuadamente su propósito
+| Problemas de Estilo y Convenciones de Codificación
+| Baja
+
+| Magic Numbers
+| Uso de números literales en el código en lugar de constantes descriptivas
+| Problemas de Estilo y Convenciones de Codificación
+| Media
+
+| Misleading Variable Names
+| Variables con nombres que no reflejan su propósito o contenido
+| Problemas de Estilo y Convenciones de Codificación
+| Media
+
+| Excessive Class Length
+| Clases que son demasiado largas y complejas
+| Problemas de Diseño
+| Alta
+
+| Excessive Method Length
+| Métodos que contienen demasiadas líneas de código, indicando que deberían ser refactorizados
+| Problemas de Diseño
+| Alta
+
+| Coupling Between Objects
+| Demasiadas dependencias entre clases, lo cual puede indicar problemas de diseño y mantenimiento
+| Problemas de Diseño
+| Alta
+
+| High Cyclomatic Complexity
+| Métodos o clases con una complejidad ciclomática alta, lo que sugiere que son difíciles de entender y mantener
+| Problemas de Diseño
+| Alta
+
+| Hardcoded Credentials
+| Credenciales como nombres de usuario y contraseñas que están hardcoded en el código fuente
+| Errores de Seguridad
+| Crítica
+
+| Insecure HTTP
+| Uso de HTTP en lugar de HTTPS para la comunicación, lo cual puede ser un riesgo de seguridad
+| Errores de Seguridad
+| Crítica
+
+| Deserialization Issues
+| Problemas relacionados con la deserialización de datos que podrían ser explotados para ataques de seguridad
+| Errores de Seguridad
+| Alta
+
+| Duplicate Code
+| Código duplicado que debería ser refactorizado para mejorar la mantenibilidad
+| Problemas de Mantenimiento
+| Media
+
+| Dead Code
+| Código que nunca se ejecuta y puede ser eliminado
+| Problemas de Mantenimiento
+| Baja
+
+| God Class
+| Clases que tienen demasiadas responsabilidades y deberían ser refactorizadas en clases más pequeñas y cohesivas
+| Problemas de Diseño
+| Alta
+
+| Suspicious Equals Method
+| Implementaciones de métodos `equals` que podrían ser incorrectas o incompletas
+| Potenciales Bugs y Problemas de Lógica
+| Alta
+
+| Overridden Methods
+| Problemas con métodos que sobrecargan o sobrescriben métodos en maneras que pueden ser problemáticas
+| Potenciales Bugs y Problemas de Lógica
+| Media
+
+| Missing Break in Switch
+| Switch statements que podrían faltar break statements, causando comportamiento no intencional
+| Potenciales Bugs y Problemas de Lógica
+| Alta
+
+| Proper Use of Access Modifiers
+| Asegurar que los campos y métodos tengan el nivel de acceso adecuado (public, private, protected)
+| Mejores Prácticas de Codificación
+| Media
+
+| Final Modifier for Static Fields
+| Recomendaciones sobre el uso de `final` para constantes y campos estáticos
+| Mejores Prácticas de Codificación
+| Media
+
+|===
+
+Esta tabla detalla los problemas específicos que PMD puede detectar, categorizados y clasificados por severidad. PMD es especialmente útil para identificar errores de codificación comunes y problemas de estilo.
+
+== Recomendación Final
+
+Para un proyecto que maneja un alto volumen de datos y necesita alta robustez y escalabilidad, recomendaría utilizar ambas herramientas: PMD y SonarQube. PMD se puede integrar fácilmente en el proceso de CI/CD actual, proporcionando detección rápida de errores de codificación. SonarQube, aunque no se integre directamente en el CI/CD, puede utilizarse para análisis periódicos y más exhaustivos, ofreciendo una visión completa de la calidad del código.
+
+== Conclusión
+
+En conclusión, el análisis estático es una práctica esencial para mantener la calidad del software. Tanto PMD como SonarQube tienen sus fortalezas y, al combinarlas, se puede maximizar la calidad del código en tu proyecto. Gracias por su atención y ahora abro el espacio para preguntas.
+
+== Preguntas y Respuestas
+
+Gracias por su atención. Ahora estoy abierto a responder cualquier pregunta que puedan tener sobre el análisis estático de software, PMD, SonarQube o cualquier otro tema relacionado.
